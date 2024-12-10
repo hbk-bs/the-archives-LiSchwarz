@@ -14,13 +14,18 @@ function setup() {
 function draw() {
   background(180, 15, 0);  
   
-  fill(255, 0, 0); 
-  rect(rectX, rectY, rectWidth, rectHeight);
+  fill(255, 15, 0); 
+  rect(rectX, rectY, rectWidth, rectHeight);  
+  
+  // Kreis wird immer gezeichnet
+  fill(0, 0, 100);  
+  ellipse(circleX, 360, circleDiameter, circleDiameter);
 
-  // Zeichne den Kreis, aber nur, wenn er sich **nicht** im Bereich des Vierecks befindet
-  if (circleX + circleDiameter / 2 < rectX || circleX - circleDiameter / 2 > rectX + rectWidth) {
-    fill(0, 0, 100);  
-    ellipse(circleX, 360, circleDiameter, circleDiameter);  
+  // Wenn der Kreis sich im Bereich des Rechtecks befindet, zeichne eine "Maske" über dem Kreis
+  if (circleX + circleDiameter / 2 > rectX && circleX - circleDiameter / 2 < rectX + rectWidth && 
+      360 + circleDiameter / 2 > rectY && 360 - circleDiameter / 2 < rectY + rectHeight) {
+    fill(255, 15, 0);
+    rect(rectX, rectY, rectWidth, rectHeight);
   }
 
   // Kreis bewegt sich nach rechts
@@ -31,7 +36,6 @@ function draw() {
     circleX = -circleDiameter / 2;  // Startet den Kreis wieder von links
   }
 }
-
 
 
 
