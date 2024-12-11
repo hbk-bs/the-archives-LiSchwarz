@@ -20,10 +20,10 @@ function setup() {
 }
 
 function draw() {
-  background(255, 100, 0);  
+  background(100, 70, 255);  
 
   for (let i = 0; i < numCircles; i++) {
-    fill(0, 70, 255);  
+    fill(120, 10, 20);  
     ellipse(circleX[i], circleY[i], 30, 30);  
 
     // Fallbewegung:
