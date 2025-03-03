@@ -12,74 +12,18 @@ html {
 
 /* style */
 body {
-  max-width: 110ch;
-  min-width: 60ch;
+  max-width: 70ch;
   margin: 0 auto;
   line-height: 1.5;
   font-family: "Gill Sans", sans-serif;
   font-weight: normal;
-  color: hsl(220, 40%, 40%);
+  color: hsl(357, 83%, 33%);
 }
 
-header {
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 0%;
-  flex-grow: 1;
-  max-width: 350px;
-  min-width: 20ch;
-}
-
-figure {
-  margin: 0;
-}
-
-figure img {
-  width: 100%;
-  display: flex;
-  margin-bottom: 16px;
-}
 main {
   display: flex;
   gap: 16px;
   padding: 16px;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  max-width: 60px;
-  min-width: 20ch;
-}
-
-main {
-	max-width: 1000px;
-	margin: 16px auto;
-	height: 100%;
-	background-color: hsl(100, 0%, 95%);
-  display: flex;
-	gap: 16px;
-	padding: 16px;
-
-}
-
-article {
-	background-color: white;
-	padding: 8px;#	
-  display: flex;
-	flex-direction: column;
-	flex: 1;
-	max-width: 350px;
-	min-width: 20ch;
-	flex-basis: 0%;
-	flex-grow: 1;
-}
-
-figure img {
 }
 
 footer {
@@ -89,7 +33,7 @@ footer {
 }
 
 .hintergrund {
-  background-color: hsl(220, 30%, 90%);
+  background-color: hsl(353, 44%, 89%);
 }
 
 h1 {
@@ -100,28 +44,22 @@ h1 {
 
 h2,
 h3 {
-  margin-bottom: 1.25em;
+  margin-bottom: 0.25em;
   text-align: left;
 }
 
-h4,
-h5,
-h6 {
-  margin-bottom: 1.25rem;
-  text-align: center;
-}
-
-p,
-blockquote {
+p {
   margin-bottom: 16px;
 }
 
 ul {
   padding: 16px;
+  margin-top: 0 rem;
+  margin-bottom: 0rem;
 }
 
 nav > ul > li > a:hover {
-  background-color: mediumaquamarine;
+  background-color: rgb(60, 17, 63);
 }
 nav > ul > li > a {
   padding-left: 8px;
@@ -129,6 +67,7 @@ nav > ul > li > a {
 }
 
 a {
+  color: hsl(357, 67%, 31%);
 }
 
 a:hover {
@@ -136,7 +75,7 @@ a:hover {
 }
 
 a:visited {
-  color: hsl(220, 40%, 40%);
+  color: hwb(356 8% 41%);
 }
 
 @media (max-width: 800px) {
