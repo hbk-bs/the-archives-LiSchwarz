@@ -1,0 +1,358 @@
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaktive Bilder</title>
+  <style>
+    #image1,
+    #image2,
+    #image3,
+    #image4,
+    #image5,
+    #image6,
+    #image7,
+    #image8,
+    #image9,
+    #image10,
+    #image11,
+    #image12,
+    #image13,
+    #image14,
+    #image15,
+    #image16,
+    #image17,
+    #image18,
+    #image19,
+    #image20,
+    #image21,
+    #image22,
+    #image23 {
+      width: 1920px;
+      display: none;
+      /* Alle Bilder zu Beginn ausblenden */
+      cursor: pointer;
+    }
+
+    #image1 {
+      display: block;
+      /* Zeigt Bild 1 initial an */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Wähle eine Tür!</h1>
+
+  <img id="image1" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.001.jpeg" alt="Bild 1">
+  <img id="image2" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.002.jpeg" alt="Bild 2">
+  <img id="image3" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.003.jpeg" alt="Bild 3">
+  <img id="image4" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.004.jpeg" alt="Bild 4">
+  <img id="image5" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.005.jpeg" alt="Bild 5">
+  <img id="image6" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.006.jpeg" alt="Bild 6">
+  <img id="image7" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.007.jpeg" alt="Bild 7">
+  <img id="image8" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.008.jpeg" alt="Bild 8">
+  <img id="image9" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.009.jpeg" alt="Bild 9">
+  <img id="image10" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.010.jpeg" alt="Bild 10">
+  <img id="image11" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.011.jpeg" alt="Bild 11">
+  <img id="image12" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.012.jpeg" alt="Bild 12">
+  <img id="image13" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.013.jpeg" alt="Bild 13">
+  <img id="image14" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.014.jpeg" alt="Bild 14">
+  <img id="image15" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.015.jpeg" alt="Bild 15">
+  <img id="image16" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.016.jpeg" alt="Bild 16">
+  <img id="image17" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.017.jpeg" alt="Bild 17">
+  <img id="image18" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.018.jpeg" alt="Bild 18">
+  <img id="image19" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.019.jpeg" alt="Bild 19">
+  <img id="image20" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.020.jpeg" alt="Bild 20">
+  <img id="image21" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.021.jpeg" alt="Bild 21">
+  <img id="image22" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/interaktion.022.jpeg" alt="Bild 22">
+  <img id="image23" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/schwarz.001.jpeg" alt="Bild 23">
+
+  <script>
+    const image1 = document.getElementById('image1');
+    const image2 = document.getElementById('image2');
+    const image3 = document.getElementById('image3');
+    const image4 = document.getElementById('image4');
+    const image5 = document.getElementById('image5');
+    const image6 = document.getElementById('image6');
+    const image7 = document.getElementById('image7');
+    const image8 = document.getElementById('image8');
+    const image9 = document.getElementById('image9');
+    const image23 = document.getElementById('image23');
+    // Klickbereiche für Bild 1
+    const area1 = {
+      x: 187,
+      y: 385,
+      width: 181,
+      height: 310
+    };
+    const area2 = {
+      x: 528,
+      y: 385,
+      width: 181,
+      height: 310
+    };
+    const area3 = {
+      x: 870,
+      y: 385,
+      width: 181,
+      height: 310
+    };
+    const area4 = {
+      x: 1211,
+      y: 385,
+      width: 181,
+      height: 310
+    };
+    const area5 = {
+      x: 1553,
+      y: 385,
+      width: 181,
+      height: 310
+    };
+    // Hilfsfunktion, um zu überprüfen, ob der Klick innerhalb eines bestimmten Bereichs liegt
+    function isClickInArea(event, area, imgElement) {
+      const rect = imgElement.getBoundingClientRect();
+      const clickX = event.clientX - rect.left;
+      const clickY = event.clientY - rect.top;
+      return (
+        clickX >= area.x &&
+        clickX <= area.x + area.width &&
+        clickY >= area.y &&
+        clickY <= area.y + area.height
+      );
+    }
+    // Event Listener für Bild 1: Wechsel zu Bild 2, 3, 4, 5, 6
+    image1.addEventListener('click', function(event) {
+      if (isClickInArea(event, area1, image1)) {
+        image1.style.display = 'none';
+        image2.style.display = 'block';
+        scheduleImage23And7(); // Bild 23 nach 1 Sekunde und dann Bild 7 nach weiterer Sekunde
+      } else if (isClickInArea(event, area2, image1)) {
+        image1.style.display = 'none';
+        image3.style.display = 'block';
+        scheduleImage23And7();
+      } else if (isClickInArea(event, area3, image1)) {
+        image1.style.display = 'none';
+        image4.style.display = 'block';
+        scheduleImage23And7();
+      } else if (isClickInArea(event, area4, image1)) {
+        image1.style.display = 'none';
+        image5.style.display = 'block';
+        scheduleImage23And7();
+      } else if (isClickInArea(event, area5, image1)) {
+        image1.style.display = 'none';
+        image6.style.display = 'block';
+      } else {
+        alert('Aua, das ist keine Tür!');
+      }
+    });
+    // Funktion, um Bild 23 nach 1 Sekunde und dann Bild 7 nach einer weiteren Sekunde anzuzeigen
+    function scheduleImage23And7() {
+      setTimeout(function() {
+        image2.style.display = 'none';
+        image3.style.display = 'none';
+        image4.style.display = 'none';
+        image5.style.display = 'none';
+        image6.style.display = 'none';
+        image23.style.display = 'block'; // Bild 23 erscheint nach 1 Sekunde
+        setTimeout(function() {
+          image23.style.display = 'none'; // Bild 23 wird ausgeblendet
+          image7.style.display = 'block'; // Bild 7 erscheint nach weiterer Sekunde
+        }, 1000); // 1 Sekunde Verzögerung für Bild 7
+      }, 1000); // 1 Sekunde Verzögerung für Bild 23
+    }
+    // Klickbereich für Bild 7
+    const area6_1 = {
+      x: 100,
+      y: 200,
+      width: 400,
+      height: 300
+    };
+    // Event Listener für Bild 7: Klick auf Bereich 6
+    image7.addEventListener('click', function(event) {
+      if (isClickInArea(event, area6_1, image7)) {
+        image7.style.display = 'none';
+        image8.style.display = 'block';
+        setTimeout(function() {
+          image8.style.display = 'none';
+          image23.style.display = 'block';
+          setTimeout(function() {
+            image23.style.display = 'none';
+            image9.style.display = 'block';
+          }, 1000);
+        }, 1000);
+      } else {
+        alert('Kein Bereich auf Bild 7 ausgewählt!');
+      }
+    });
+    // Klickbereiche für Bild 9
+    const area9_1 = {
+      x: 511,
+      y: 635,
+      width: 222,
+      height: 381
+    };
+    const area9_2 = {
+      x: 1059,
+      y: 635,
+      width: 444,
+      height: 382
+    };
+    const area9_3 = {
+      x: 1779,
+      y: 631,
+      width: 222,
+      height: 381
+    };
+    // Event Listener für Bild 9: Klickbereiche für Bild 10, 11, 12
+    image9.addEventListener('click', function(event) {
+      if (isClickInArea(event, area9_1, image9)) {
+        image9.style.display = 'none';
+        image10.style.display = 'block';
+        setTimeout(function() {
+          image10.style.display = 'none';
+          image23.style.display = 'block';
+          setTimeout(function() {
+            image23.style.display = 'none';
+            image13.style.display = 'block';
+          }, 1000); // Nach Bild 23 erscheint Bild 13
+        }, 1000); // Nach Bild 10 erscheint Bild 23
+      } else if (isClickInArea(event, area9_2, image9)) {
+        image9.style.display = 'none';
+        image11.style.display = 'block';
+        setTimeout(function() {
+          image11.style.display = 'none';
+          image23.style.display = 'block';
+          setTimeout(function() {
+            image23.style.display = 'none';
+            image13.style.display = 'block';
+          }, 1000); // Nach Bild 23 erscheint Bild 13
+        }, 1000); // Nach Bild 11 erscheint Bild 23
+      } else if (isClickInArea(event, area9_3, image9)) {
+        image9.style.display = 'none';
+        image12.style.display = 'block';
+        setTimeout(function() {
+          image12.style.display = 'none';
+          image23.style.display = 'block';
+          setTimeout(function() {
+            image23.style.display = 'none';
+            image13.style.display = 'block';
+          }, 1000); // Nach Bild 23 erscheint Bild 13
+        }, 1000); // Nach Bild 12 erscheint Bild 23
+      } else {
+        alert('Kein Bereich auf Bild 9 ausgewählt!');
+      }
+    });
+    // Klickbereiche für Bild 13
+    const area13_1 = {
+      x: 145,
+      y: 266,
+      width: 282,
+      height: 543
+    };
+    const area13_2 = {
+      x: 498,
+      y: 269,
+      width: 282,
+      height: 543
+    };
+    const area13_3 = {
+      x: 1114,
+      y: 269,
+      width: 282,
+      height: 543
+    };
+    const area13_4 = {
+      x: 1589,
+      y: 269,
+      width: 282,
+      height: 543
+    };
+    // Event Listener für Bild 13: Klickbereiche für Bild 14, 15, 16, 17
+    image13.addEventListener('click', function(event) {
+      if (isClickInArea(event, area13_1, image13)) {
+        image13.style.display = 'none';
+        image14.style.display = 'block';
+      } else if (isClickInArea(event, area13_2, image13)) {
+        image13.style.display = 'none';
+        image15.style.display = 'block';
+      } else if (isClickInArea(event, area13_3, image13)) {
+        image13.style.display = 'none';
+        image16.style.display = 'block';
+      } else if (isClickInArea(event, area13_4, image13)) {
+        image13.style.display = 'none';
+        image17.style.display = 'block';
+      } else {
+        alert('Kein Bereich auf Bild 13 ausgewählt!');
+      }
+    });
+    // Funktion, um Bild 23 nach 1 Sekunde anzuzeigen und dann Bild 18 nach einer weiteren Sekunde
+    function scheduleImage23AndNext(image) {
+      setTimeout(function() {
+        image.style.display = 'none';
+        image23.style.display = 'block'; // Bild 23 erscheint nach 1 Sekunde
+        setTimeout(function() {
+          image23.style.display = 'none'; // Bild 23 wird ausgeblendet
+          image18.style.display = 'block'; // Bild 18 erscheint nach weiterer Sekunde
+        }, 1000); // 1 Sekunde Verzögerung für Bild 18
+      }, 1000); // 1 Sekunde Verzögerung für Bild 23
+    }
+    // Klickbereiche für Bild 18
+    const area18_1 = {
+      x: 137,
+      y: 281,
+      width: 324,
+      height: 556
+    };
+    const area18_2 = {
+      x: 678,
+      y: 748,
+      width: 46,
+      height: 86
+    };
+    const area18_3 = {
+      x: 779,
+      y: 512,
+      width: 361,
+      height: 347
+    };
+    const area18_4 = {
+      x: 1196,
+      y: -144,
+      width: 572,
+      height: 981
+    };
+    // Event Listener für Bild 18: Klickbereiche für Bild 19, 20, 22 und 23
+    image18.addEventListener('click', function(event) {
+      if (isClickInArea(event, area18_1, image18)) {
+        image18.style.display = 'none';
+        image19.style.display = 'block';
+        scheduleImage23(image19);
+      } else if (isClickInArea(event, area18_2, image18)) {
+        image18.style.display = 'none';
+        image20.style.display = 'block';
+        scheduleImage23(image20);
+      } else if (isClickInArea(event, area18_3, image18)) {
+        image18.style.display = 'none';
+        image22.style.display = 'block';
+        scheduleImage23(image22);
+      } else if (isClickInArea(event, area18_4, image18)) {
+        image18.style.display = 'none';
+        image23.style.display = 'block';
+        scheduleImage23(image23);
+      } else {
+        alert('Kein Bereich auf Bild 18 ausgewählt!');
+      }
+    });
+    // Funktion, um Bild 23 nach 1 Sekunde anzuzeigen
+    function scheduleImage23(image) {
+      setTimeout(function() {
+        image.style.display = 'none';
+        image23.style.display = 'block'; // Bild 23 erscheint nach 1 Sekunde
+      }, 1000); // 1 Sekunde Verzögerung für Bild 23
+    }
+  </script>
+</body>
+
+</html>

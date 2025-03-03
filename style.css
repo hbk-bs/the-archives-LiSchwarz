@@ -1,13 +1,87 @@
-body {
-	height: 100dvh;
-	width: 100dvw;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 110%;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
+/* style */
+body {
+  max-width: 70ch;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: normal;
+  color: hsl(357, 83%, 33%);
+}
+
+main {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+footer {
+  text-align: right;
+  margin-top: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.hintergrund {
+  background-color: hsl(353, 44%, 89%);
+}
+
+h1 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+h2,
+h3 {
+  margin-bottom: 0.25em;
+  text-align: left;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+ul {
+  padding: 16px;
+  margin-top: 0 rem;
+  margin-bottom: 0rem;
+}
+
+nav > ul > li > a:hover {
+  background-color: rgb(60, 17, 63);
+}
+nav > ul > li > a {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+a {
+  color: hsl(357, 67%, 31%);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: hwb(356 8% 41%);
+}
+
+@media (max-width: 800px) {
+  body {
+    padding-left: 8px;
+    padding-right: 8px;
+    flex-direction: column;
+  }
 }
