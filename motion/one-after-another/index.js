@@ -9,15 +9,18 @@ let fallStartY = 100;
 let currentCircle = 0;  // Beginne mit dem ersten Kreis, der fällt
 
 function setup() {
-  createCanvas(500, 500);
+  const canvas = createCanvas(500, 500);
+  canvas.parent('sketch');
+  background(255, 165, 0); 
+  angleMode(DEGREES);
   noStroke();
+}
 
   for (let i = 0; i < numCircles; i++) {
     circleX[i] = 100 + i * 80;  // Startposition in einer Linie (horizontal)
     circleY[i] = fallStartY;  // Alle Kreise starten oben
     circleState[i] = 0;  // Alle Kreise starten im "warten" Zustand
   }
-}
 
 function draw() {
   background(100, 70, 255);  

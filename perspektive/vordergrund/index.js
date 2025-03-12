@@ -1,8 +1,11 @@
 function setup() {
 	const canvas = createCanvas(500, 500);
-	canvas.parent('sketch')
-	background("darkolivegreen");
+	canvas.parent('sketch');
+	background(255, 165, 0); 
+	angleMode(DEGREES);
 	noStroke();
+	
+	background("darkolivegreen");
 
 	fill("lightblue");
 	rect(0, 0, 500, 150);

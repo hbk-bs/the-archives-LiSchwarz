@@ -1,4 +1,4 @@
-/* reset */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -6,76 +6,177 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   font-size: 110%;
 }
 
-/* style */
 body {
   max-width: 70ch;
-  margin: 0 auto;
+  margin: auto;
   line-height: 1.5;
   font-family: "Gill Sans", sans-serif;
-  font-weight: normal;
-  color: hsl(357, 83%, 33%);
-}
-
-main {
-  display: flex;
-  gap: 16px;
-  padding: 16px;
+  font-weight: 200;
+  color: rgb(185, 12, 12);
+  padding-top: 16px; 
 }
 
 footer {
+  position: relative; 
+  right: 80px;
+  bottom: 3rem; 
   text-align: right;
-  margin-top: 1.75rem;
-  margin-bottom: 1.25rem;
-}
-
-.hintergrund {
-  background-color: hsl(353, 44%, 89%);
+  margin-top: 3rem;
 }
 
 h1 {
-  margin-top: 1.75rem;
-  margin-bottom: 1.25rem;
+  position: absolute;
+  top: 3rem; 
+  left: 80px;
+  font-size: 200%;
+  font-weight: 800;
+  margin: 0; 
+  
+}
+
+h4 {
   text-align: center;
+  font-size: 180%;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  margin-top: 8rem; 
 }
 
-h2,
-h3 {
-  margin-bottom: 0.25em;
-  text-align: left;
+h5 {
+  position: absolute;
+  margin: 40px;
+  font-size: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
 }
 
-p {
-  margin-bottom: 16px;
-}
-
-ul {
-  padding: 16px;
-  margin-top: 0 rem;
-  margin-bottom: 0rem;
-}
-
-nav > ul > li > a:hover {
-  background-color: rgb(60, 17, 63);
-}
-nav > ul > li > a {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-a {
-  color: hsl(357, 67%, 31%);
-}
-
-a:hover {
+.h5-link {
+  position: absolute;
+  right: 160px;
+  top: 35px;
   text-decoration: none;
 }
 
-a:visited {
-  color: hwb(356 8% 41%);
+.h5-link h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+.h5-link:hover h5 {
+  color: rgb(185, 12, 12);
+}
+
+h6 {
+  position: absolute;
+  margin: 40px;
+  font-size: 100%;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.h6-link {
+  position: absolute;
+  right: 280px;
+  top: 35px;
+  text-decoration: none;
+}
+
+.h6-link h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+.h6-link:hover h6 {
+  color: rgb(185, 12, 12);
+}
+
+h3 {
+  margin-bottom: 20px;
+  max-width: 180px;
+  text-align: center;
+  font-size: 120%;
+  background-color: rgb(185, 12, 12);
+  color: white;
+  border-radius: 12px;
+  line-height: 2.6;
+  font-weight: 600;
+}
+
+h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3 a:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255, 0.533);
+}
+
+h3:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255, 0.533);
+}
+
+.header-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.header-links a:hover {
+  color: rgb(185, 12, 12);
+}
+
+.perspektive-links a,
+.motion-links a {
+  color: rgb(185, 12, 12); 
+  text-decoration: none; 
+}
+
+.perspektive-links a:hover,
+.motion-links a:hover {
+  color: rgba(185, 12, 12, 0.533);
+}
+
+.perspektive-links,
+.motion-links {
+  height: 0; 
+  opacity: 0;
+  overflow: hidden;
+  padding-left: 20px;
+  transition: height 0.5s ease, opacity 0.5s ease;
+  margin-top: 0;
+}
+
+/* Listen sichtbar machen, wenn die Klasse .active hinzugefügt wird */
+.perspektive-links.active,
+.motion-links.active {
+  height: auto;
+  opacity: 1;
+}
+
+p {
+  text-align: center;
+  font-size: 100%;
+  color: rgb(0, 0, 0);
+  margin-top: 0rem; 
+  margin-bottom: 60px;
 }
 
 @media (max-width: 800px) {

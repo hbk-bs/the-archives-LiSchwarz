@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Starter Project</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        main {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+    html,
+    body {
+        height: 100%;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-family: "Gill Sans", sans-serif;
+        font-weight: normal;
+        color: rgb(185, 12, 12);
+    }
 
-        a {
-            color: #007bff;
-            text-decoration: none;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding-top: 50px;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    main {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    a {
+        color: rgb(185, 12, 12);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgba(185, 12, 12, 0.533);
+    }
+
+    a.back-link {
+        position: absolute;
+        left: 10px;
+        top: 65px;
+        font-size: 1.2rem;
+    }
+
+    a.title {
+        text-decoration: none;
+        pointer-events: none;
+        margin-top: 20px;
+        margin-bottom: -70px;
+        font-size: 1rem;
+    }
+
+    img {
+        max-width: 100%; 
+        height: auto;   
+        max-height: 800px; 
+        margin-top: 80px;
+    }
+
     </style>
 </head>
 <body>
-    <a href="../index.html">❮</a>
-    <h1>Hier ist das Bild!</h1>
+    <a href="../../index.html" class="back-link">«</a>
+    <a class="title">Algorithmus</a>
+    <script src="../../modules/p5/lib/p5.min.js"></script>
+    <script src="index.js"></script>
     <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/algorithmus1.JPG" alt="Algorithmus 1">
-    <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/algorithmus2.JPG" alt="Algorithmus 2"> 
+    <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/algorithmus2.JPG" alt="Algorithmus 2">
 </body>
 </html>
-
-

@@ -1,9 +1,11 @@
 function setup() {
+		const canvas = createCanvas(500, 500);
+		canvas.parent('sketch');
+		background(255, 165, 0); 
+		angleMode(DEGREES);
+		noStroke();
 	colorMode(HSL, 360, 100, 100, 100);
-	createCanvas(500, 500);
 	background(170, 40, 30);
-	noStroke();
-	angleMode(DEGREES);
 
 	const x = (n) => width * n;
 	const y = (n) => height * n;

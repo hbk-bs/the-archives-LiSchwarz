@@ -6,7 +6,6 @@
     <title>p5.js Starter Project</title>
     <style>
     html,
-    
     body {
         height: 100%;
         max-width: 110ch;
@@ -15,14 +14,18 @@
         line-height: 1.5;
         font-family: "Gill Sans", sans-serif;
         font-weight: normal;
-        color: hsl(220, 40%, 40%); 
+        color: rgb(185, 12, 12);
     }
 
     body {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding-top: 50px; 
     }
+
     main {
         height: 100%;
         display: flex;
@@ -32,28 +35,39 @@
     }
 
     a {
-        color: hsl(220, 40%, 40%); 
+        color: rgb(185, 12, 12);
         text-decoration: none; 
     }
 
     a:hover {
-        color: hsl(220, 40%, 60%); 
+        color: rgba(185, 12, 12, 0.533);
+    }
+
+    a.back-link {
+        position: absolute;
+        left: 10px;
+        top: 65px; 
+        font-size: 1.2rem;
+    }
+
+    a.title {
+        text-decoration: none;
+        pointer-events: none; 
+        margin-top: 20px;
+        margin-bottom: -70px; 
+        font-size: 1rem;
     }
 
     </style>
 </head>
 <body>
-    <body>
-        <a href="../../index.html">❮</a>
-    </body>
-<main>
-    <div id="sketch"></div>
-    <a href="index.js">source code</a>
+    <a href="../../index.html" class="back-link">«</a>
+    <a class="title">Reflektion</a>
+    <main>
+        <div id="sketch"></div>
+        <a href="index.js">source code</a>
     </main>
     <script src="../../modules/p5/lib/p5.min.js"></script>
-    <!-- <script src="./modules/p5/lib/addons/p5.sound.min.js"></script> -->
-   <!-- <script src="./modules/@ff6347/p5-easing/dist/p5.easing.min.js"></script> -->
-
     <script src="index.js"></script>
 </body>
 </html>

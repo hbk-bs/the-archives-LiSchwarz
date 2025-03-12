@@ -5,8 +5,12 @@ let minDiameter = 20;
 let targetX, targetY;  // Zielposition in der Mitte des Bildes
 let currentCircle = 0;  
 
+
 function setup() {
-  createCanvas(500, 500);
+  const canvas = createCanvas(500, 500);
+  canvas.parent('sketch');
+  background(255, 165, 0); 
+  angleMode(DEGREES);
   targetX = width / 1.05;  
   targetY = height / 1.5; 
   noStroke();

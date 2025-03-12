@@ -1,5 +1,8 @@
 function setup() {
-	createCanvas(500, 500);
+	const canvas = createCanvas(500, 500);
+	canvas.parent('sketch');
+	background(255, 165, 0); 
+	angleMode(DEGREES);
 	background("darkolivegreen");
 	noStroke();
 

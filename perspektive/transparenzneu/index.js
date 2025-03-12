@@ -1,10 +1,11 @@
 function setup() {
 	const canvas = createCanvas(500, 500);
-	canvas.parent('sketch')
-	colorMode(HSL, 360, 100, 100, 100);
-	createCanvas(500, 500);
-	background(270, 20, 40);
+	canvas.parent('sketch');
+	background(255, 165, 0); 
+	angleMode(DEGREES);
 	noStroke();
+	colorMode(HSL, 360, 100, 100, 100);
+	background(270, 20, 40);
 	const step = 25;
 
 	let x = 0;
