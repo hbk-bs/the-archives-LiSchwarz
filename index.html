@@ -17,7 +17,7 @@
       .header-links {
         display: flex;
         justify-content: flex-end;
-        gap: 16px; /* Abstand zwischen den Elementen */
+        gap: 16px; 
       }
 
       .header-links a {
@@ -30,7 +30,7 @@
       }
 
       .perspektive-links,
-      .motion-links {
+      .motion-links, .interaktion-links {
         height: 0;
         opacity: 0; 
         overflow: hidden;
@@ -40,7 +40,7 @@
       }
 
       .perspektive-links.active,
-      .motion-links.active {
+      .motion-links.active, .interaktion-links.active {
         height: auto;
         opacity: 1; 
       }
@@ -80,11 +80,17 @@
           <li><a href="perspektive/transparenz/index.html">Transparenz</a></li>
           <li><a href="perspektive/transparenzneu/index.html">Transparenz neu</a></li>
           <li><a href="perspektive/querschnitt/index.html">Querschnitt</a></li>
-          <li><a href="perspektive/reflektion/index.html">Reflexion</a></li>
+          <li><a href="perspektive/reflektion/index.html">Spiegelung</a></li>
           <li><a href="perspektive/rueckansicht/index.html">Rückansicht</a></li>
+          <a href="perspektive/reflexion/index.html">Reflexion</a>
         </ul>
 
-        <h3><a href="interaktion/index.html">Interaktion</a></h3>
+        <h3 class="interaktion-header">Interaktion</h3>
+        <ul class="interaktion-links">
+          <li><a href="interaktion/tueren/index.html">Türen</a></li>
+          <li><a href="interaktion/fangen/index.html">load image</a></li>
+          <a href="interaktion/reflexion/index.html">Reflexion</a>
+        </ul>
 
         <h3 class="motion-header">Bewegung</h3>
         <ul class="motion-links">
@@ -93,15 +99,16 @@
           <li><a href="motion/in-a-line/index.html">in a line</a></li>
           <li><a href="motion/one-after-another/index.html">one after another</a></li>
           <li><a href="motion/over/index.html">over</a></li>
+          <a href="motion/reflexion/index.html">Reflexion</a>
         </ul>
 
         <h3><a href="blinkenlichten/index.html">Blinkenlichten</a></h3>
-        
+
       </div>
     </main>
 
     <footer>
-      Linda Schwarz
+      Linda Schwarz | Visuelle Kommunikation | HBK
     </footer>
 
     <script>
@@ -111,6 +118,9 @@
         
         const motionHeader = document.querySelector('.motion-header');
         const motionLinks = document.querySelector('.motion-links');
+        
+        const interaktionHeader = document.querySelector('.interaktion-header');
+        const interaktionLinks = document.querySelector('.interaktion-links');
 
         perspektiveHeader.addEventListener('click', function() {
           perspektiveLinks.classList.toggle('active');
@@ -118,6 +128,10 @@
 
         motionHeader.addEventListener('click', function() {
           motionLinks.classList.toggle('active');
+        });
+
+        interaktionHeader.addEventListener('click', function() {
+          interaktionLinks.classList.toggle('active');
         });
       });
     </script>

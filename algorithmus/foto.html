@@ -5,72 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p5.js Starter Project</title>
     <style>
-    html,
-    body {
-        height: 100%;
-        margin: 0 auto;
-        line-height: 1.5;
-        font-family: "Gill Sans", sans-serif;
-        font-weight: normal;
-        color: rgb(185, 12, 12);
-    }
+        html, body {
+            height: 100%;
+            max-width: 110ch;
+            min-width: 250px; 
+            margin: 0 auto;
+            line-height: 1.5;
+            font-family: "Gill Sans", sans-serif;
+            font-weight: normal;
+            color: rgb(185, 12, 12);
+        }
 
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-        padding-top: 50px;
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-top: 50px; 
+            min-height: 100vh;
+        }
 
-    main {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: flex-end;
-    }
+        a {
+            color: rgb(185, 12, 12);
+            text-decoration: none; 
+        }
 
-    a {
-        color: rgb(185, 12, 12);
-        text-decoration: none;
-    }
+        a:hover {
+            color: rgba(185, 12, 12, 0.533);
+        }
 
-    a:hover {
-        color: rgba(185, 12, 12, 0.533);
-    }
+        a.back-link {
+            position: absolute;
+            left: 10px;
+            top: 65px; 
+            font-size: 1.2rem;
+        }
 
-    a.back-link {
-        position: absolute;
-        left: 10px;
-        top: 65px;
-        font-size: 1.2rem;
-    }
+        a.title {
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 180%;
+            color: rgb(185, 12, 12);
+            font-weight: 700;
+        }
 
-    a.title {
-        text-decoration: none;
-        pointer-events: none;
-        margin-top: 20px;
-        margin-bottom: -70px;
-        font-size: 1rem;
-    }
+        section {
+            max-width: 70%;
+            min-width: 60%;
+            margin-top: 20px; 
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: left;
+            color: rgb(185, 12, 12); 
+        }
 
-    img {
-        max-width: 100%; 
-        height: auto;   
-        max-height: 800px; 
-        margin-top: 80px;
-    }
+        section p {
+            margin-bottom: 10px;
+        }
+
+        section p strong {
+            display: block;
+            margin-top: 40px;
+        }
+
+        img {
+            max-width: 100%; 
+            height: auto;   
+            max-height: 800px; 
+            margin-top: 40px;
+            border-radius: 8px;
+        }
 
     </style>
 </head>
 <body>
     <a href="../../index.html" class="back-link">«</a>
     <a class="title">Algorithmus</a>
-    <script src="../../modules/p5/lib/p5.min.js"></script>
-    <script src="index.js"></script>
+
     <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/algorithmus1.JPG" alt="Algorithmus 1">
     <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/algorithmus2.JPG" alt="Algorithmus 2">
+    
+    <section>
+        <p><strong>Reflexion "Analoge Algorithmen"</strong></p>
+        <p>
+            Unser erster Berührungspunkt mit Algorithmen fand in analoger Form statt.
+            Herausfordernd war es, herauszufinden, was alles beachtet werden musste, damit das gewünschte Ergebnis erzielt werden konnte. Elemente wie das Format, die Wahl des Stiftes oder unterschiedliche Auslegungen von Begriffen waren einem im ersten Moment gar nicht bewusst, stellten sich aber als durchaus relevant heraus. Ich erkannte, wie präzise und detailliert die Wortwahl sein muss, damit die Rezipient*innen meine Vorstellung verstehen und ein konsistentes Ergebnis erzielt wird. Auch wenn die Ästhetik weniger im Vordergrund stand, fand ich das vierte Ergebnis besonders ansprechend, da ich die Anordnung im Format und das Zusammenspiel von dynamischen und statischen Elementen gelungen fand. Wenn ich die gleiche Aufgabe noch einmal machen würde, wäre es interessant, denselben Algorithmus mehreren Rezipient*innen zu geben, um die Unterschiede und Gemeinsamkeiten bei der Umsetzung zu vergleichen.
+            Diese ersten Erfahrungen mit Algorithmen in analoger Form haben mir später geholfen, die Umsetzung in digitale Formate besser zu verstehen. Denn insbesondere die digitalen Projekte erfordern eine präzise Genauigkeit, wie die korrekte Anwendung der Programmiersprachen. 
+        </p>
+    </section>
+
+    <script src="../../modules/p5/lib/p5.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

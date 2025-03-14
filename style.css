@@ -22,11 +22,12 @@ body {
 }
 
 footer {
-  position: relative; 
-  right: 80px;
-  bottom: 3rem; 
+  position: absolute;
+  margin: 80px;
+  right: 0px;
   text-align: right;
-  margin-top: 3rem;
+  font-size: 80%;
+  color: rgba(185, 12, 12, 0.533);
 }
 
 h1 {
@@ -111,6 +112,7 @@ h3 {
   border-radius: 12px;
   line-height: 2.6;
   font-weight: 600;
+  margin-left: 35px;
 }
 
 h3 a {
@@ -144,29 +146,39 @@ h3:hover {
 }
 
 .perspektive-links a,
-.motion-links a {
+.motion-links a, .interaktion-links a {
   color: rgb(185, 12, 12); 
   text-decoration: none; 
 }
 
 .perspektive-links a:hover,
-.motion-links a:hover {
+.motion-links a:hover, .interaktion-links a:hover {
   color: rgba(185, 12, 12, 0.533);
 }
 
 .perspektive-links,
-.motion-links {
+.motion-links, .interaktion-links {
   height: 0; 
   opacity: 0;
   overflow: hidden;
   padding-left: 20px;
   transition: height 0.5s ease, opacity 0.5s ease;
   margin-top: 0;
+  margin-left: 35px;
 }
 
-/* Listen sichtbar machen, wenn die Klasse .active hinzugefügt wird */
+.perspektive-links a[href="perspektive/reflexion/index.html"], .motion-links a[href="motion/reflexion/index.html"], .interaktion-links a[href="interaktion/reflexion/index.html"] {
+  color: rgb(0, 0, 0); 
+  font-size: 100%;
+  font-weight: 700;
+}
+
+.perspektive-links a[href="perspektive/reflexion/index.html"]:hover, .motion-links a[href="motion/reflexion/index.html"]:hover, .interaktion-links a[href="interaktion/reflexion/index.html"]:hover {
+  color: rgb(185, 12, 12);
+}
+
 .perspektive-links.active,
-.motion-links.active {
+.motion-links.active, .interaktion-links.active {
   height: auto;
   opacity: 1;
 }

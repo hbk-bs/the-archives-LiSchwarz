@@ -5,84 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p5.js Starter Project</title>
     <style>
-    html,
-    body {
-        height: 100%;
-        max-width: 110ch;
-        min-width: 60ch;
-        margin: 0 auto;
-        line-height: 1.5;
-        font-family: "Gill Sans", sans-serif;
-        font-weight: normal;
-        color: rgb(185, 12, 12);
-    }
+        html, body {
+            height: 100%;
+            max-width: 110ch;
+            min-width: 650px; 
+            margin: 0 auto;
+            line-height: 1.5;
+            font-family: "Gill Sans", sans-serif;
+            font-weight: normal;
+            color: rgb(185, 12, 12);
+        }
 
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-        padding-top: 50px; 
-        min-height: 100vh;
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-top: 50px; 
+            padding-bottom: 50px;
+            min-height: 100vh;
+        }
 
-    a {
-        color: rgb(185, 12, 12);
-        text-decoration: none; 
-    }
+        a {
+            color: rgb(185, 12, 12);
+            text-decoration: none; 
+        }
 
-    a:hover {
-        color: rgba(185, 12, 12, 0.533);
-    }
+        a:hover {
+            color: rgba(185, 12, 12, 0.533);
+        }
 
-    a.back-link {
-        position: absolute;
-        left: 10px;
-        top: 65px; 
-        font-size: 1.2rem;
-    }
+        a.back-link {
+            position: absolute;
+            left: 10px;
+            top: 65px; 
+            font-size: 1.2rem;
+        }
 
-    a.title {
-        text-decoration: none;
-        pointer-events: none; 
-        margin-top: 20px;
-        font-size: 1.5rem;
-    }
+        a.title {
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 180%;
+            color: rgb(185, 12, 12);
+            font-weight: 700;
+        }
 
-    section {
-        max-width: 60%;
-        min-width: 60%;
-        margin-top: 80px; 
-        padding: 24px;
-        box-sizing: border-box;
-        text-align: left;
+        h1 {
+            text-align: right;
+            margin-top: 0px;
+            font-size: 400%;
+            color: rgb(255, 255, 255);
+            font-weight: 900;
+        }
 
-        background-color: rgb(185, 12, 12); 
-        color: white; 
-        border-radius: 12px; 
-    }
+        section {
+            max-width: 85%;
+            min-width: 60%;
+            margin-top: 20px; 
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: left;
+            color: rgb(185, 12, 12); 
+        }
 
-    section p {
-        margin-bottom: 10px;
-    }
+        section p {
+            margin-bottom: 10px;
+        }
+
+        section p strong {
+            display: block;
+            margin-top: 40px;
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 50px;
+            max-width: 80%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .last-image {
+            width: 80%;
+            height: auto;
+            max-height: 800px; 
+            margin-top: 40px;
+            margin-bottom: -65px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 700px) {
+            .image-container {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
     </style>
 </head>
 <body>
     <a href="../../index.html" class="back-link">«</a>
-    <a class="title">Kontakt</a>
-
-    <section>
-        <p><strong>Dokumentation</strong></p>
-        <p>Grundlagen der digitalen Kommunikation 1</p>
-        <p>Visuelle Kommunikation WiSe 24/25</p>
-        <p>HBK Braunschweig</p> 
-        <p>Linda Schwarz</p>
-        <p>Matrikel-Nr.: 79135</p>
-    </section>
-
+    <a class="title">Blinkenlichten</a>
+    
     <script src="../../modules/p5/lib/p5.min.js"></script>
     <script src="index.js"></script>
+
+    <div class="image-container">
+        <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/blinkenlichten3.jpeg" alt="Katze 3">
+        <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/blinkenlichten1.jpeg" alt="Katze 1">
+        <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/blinkenlichten4.jpeg" alt="Katze 4">
+        <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/blinkenlichten2.jpeg" alt="Katze 2">
+        <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/blinkenlichten5.jpeg" alt="Katze 5">
+        <img src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/blinkenlichten7.jpeg" alt="Katze 7">
+    </div>
+  
+    <a href="sourcecode.html">source code</a>
+
+    <section>
+        <p><strong>Reflexion "Katze"</strong></p>
+        <p>
+            Nachdem wir uns intensiv mit digitaler Programmierung beschäftigt hatten, eröffneten uns die Arduino-Boards die Kombination aus Soft- und Hardware.
+
+Am Physical Computing hat mir besonders gut gefallen, dass man den Schaltkreis direkt vor Augen sehen konnte und das Ganze dadurch einen großen praktischen Anteil erhielt. Für die Aufgabe mit dem Arduino-Board entwickelte sich recht schnell die Idee, eine Katze zu bauen, die in irgendeiner Weise durch Reize aus ihrer Umgebung beeinflusst wird. Passend dazu ergab sich in unserem Kurs die Einigung auf das Thema „Straße – ein Albtraum“, in das sich unsere Idee gut einfügte.
+
+Wir entschieden uns dafür, dass die Katze im Aus-Zustand schläft und durch Lärm geweckt wird. Dies wird durch rotes Aufleuchten verdeutlicht, was gleichzeitig die Wut der Katze unterstreichen soll.
+
+Nach einigen Skizzen begannen wir, die Katze aus Draht und Stoff zu basteln. Rückblickend wäre ein feinmaschigerer Draht besser gewesen, um die Körperform genauer wiederzugeben. Zudem hätte ein weicherer, flauschiger Stoff das Katzenfell besser imitiert.
+
+Es erwies sich als schwierig, den Lautstärkesensor richtig zu kalibrieren, da dabei viel Feingefühl gefragt war. Nachdem wir das Arduino-Board und den Schaltkreis mühsam im Körper verbaut hatten, war der Sensor leider weniger sensibel als zuvor und reagierte nur noch auf sehr laute Geräusche.
+
+Wenn wir das Projekt noch einmal umsetzen würden, wäre es ratsam, den Schaltkreis so unterzubringen, dass er auch nachträglich zugänglich bleibt. So ließe sich ein Problem wie das mit dem Sensor leichter beheben. Außerdem fiel uns auf, dass die Katze nicht dauerhaft rot leuchtet, selbst wenn mehrere Störungen hintereinander auftreten. Dabei sollte sie im übertragenen Sinn die ganze Zeit wütend sein, solange Lärm ertönt, anstatt zwischendurch wieder friedlich zu schlafen.
+
+Die Ausstellung der verschiedenen Projekte zu „Blinkenlichten“ war ein gelungener Abschluss des Semesters. Es hat Spaß gemacht, die verschiedenen Projekte und Sensoren der anderen Gruppen auszuprobieren. Insgesamt war ich überrascht, wie gute und vielfältige Sensoren man für wenig Geld bekommt.
+        </p>
+    </section>
+
+    <img class="last-image" src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/blinkenlichten6.jpeg" alt="Katze 6">
+
+    <h1>Endergebnis</h1>
+
+    <section></section>
+
 </body>
 </html>
-
