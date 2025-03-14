@@ -44,13 +44,13 @@
     }
 
     a.title {
-            text-decoration: none;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 180%;
-            color: rgb(185, 12, 12);
-            font-weight: 700;
-        }
+        text-decoration: none;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 180%;
+        color: rgb(185, 12, 12);
+        font-weight: 700;
+    }
 
     section {
         max-width: 60%;
@@ -68,16 +68,39 @@
     section p {
         margin-bottom: 10px;
     }
+
+    /* Video styling */
+    video {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0px; /* Abstand von 40px zwischen den Videos */
+    }
+
+    /* Beschreibung unter den Videos */
+    .video-description {
+        text-align: left;
+        font-size: 1.2rem;
+        color: rgb(255, 255, 255);
+        font-weight: normal;
+    }
     </style>
 </head>
 <body>
-    <a href="../../index.html" class="back-link">«</a>
-    <a class="title">Kontakt</a>
-    <video width="640" height="360" controls>
-        <source src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/katzevideo1.mov" type="video/mp4">
-    </video>
+    <a href="index.html" class="back-link">«</a>
+    <a class="title">Videos</a>
+    <section>
+        <p class="video-description">Reaktion durch laute Geräusche</p>
+        <video width="640" height="360" controls>
+            <source src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/videokatze1.mp4" type="video/mp4">
+        </video>
+        
+        <p class="video-description">Reaktion durch grobes Streicheln</p>
+        <video width="640" height="360" controls>
+            <source src="https://hbk-bs.github.io/the-archives-LiSchwarz/assets/images/videokatze2.mp4" type="video/mp4">
+        </video>
+        
+    </section>
     <script src="../../modules/p5/lib/p5.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
-
