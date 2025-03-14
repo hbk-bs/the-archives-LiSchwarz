@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Starter Project</title>
+    <style>
+        html, body {
+            height: 100%;
+            max-width: 110ch;
+            min-width: 650px; 
+            margin: 0 auto;
+            line-height: 1.5;
+            font-family: "Gill Sans", sans-serif;
+            font-weight: normal;
+            color: rgb(185, 12, 12);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-top: 50px; 
+            padding-bottom: 50px;
+            min-height: 100vh;
+        }
+
+        a {
+            color: rgb(185, 12, 12);
+            text-decoration: none; 
+        }
+
+        a:hover {
+            color: rgba(185, 12, 12, 0.533);
+        }
+
+        a.back-link {
+            position: absolute;
+            left: 10px;
+            top: 65px; 
+            font-size: 1.2rem;
+        }
+
+        section {
+            max-width: 100%;
+            min-width: 60%;
+            margin-top: 20px; 
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: left;
+            color: rgb(185, 12, 12); 
+        }
+
+        section p {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+code {
+    font-family: "Courier New", monospace;
+    color: rgb(185, 12, 12);
+}
+
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">«</a>
+    <section>
+        <p><strong>source code</strong></p>
+        <pre><code>
+            #include <FastLED.h>
+
+                #define LED_PIN 3
+                #define NUM_LEDS 6
+                #define BRIGHTNESS 255
+                #define LED_TYPE WS2811
+                #define COLOR_ORDER RGB
+                CRGB leds[NUM_LEDS];
+                
+                
+                int soundDetectedPin = 10;    // Use Pin 10 as our Input
+                int soundDetectedVal = HIGH;  // This is where we record our Sound
+                //Measurement
+                boolean bAlarm = false;
+                unsigned long lastSoundDetectTime;  // Record the time that we
+                //measured a sound
+                
+                int soundAlarmTime = 500;  // Number of milli seconds to keep the
+                //sound alarm high
+                
+                void setup() {
+                  Serial.begin(9600);
+                  pinMode(soundDetectedPin, INPUT);  // input from the Sound
+                  //Detection Module
+                  FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
+                  FastLED.setBrightness(BRIGHTNESS);
+                }
+                void loop() {
+                  soundDetectedVal = digitalRead(soundDetectedPin);  // read the
+                  //sound alarm time
+                  if (soundDetectedVal == LOW)  // If we hear a sound
+                  {
+                    lastSoundDetectTime = millis();  // record the time of the sound
+                    //alarm
+                    // The following is so you don't scroll on the output screen
+                    if (!bAlarm) {
+                      Serial.println("LOUD, LOUD");
+                
+                      bAlarm = true;
+                      // fill_solid(leds, NUM_LEDS, CHSV(257, 255, 255));
+                      // FastLED.show();
+                      // delay(10);
+                      // leds[0] = CHSV(255, 200, 200);
+                      for (int i = 255; i >= 0; i--) {
+                        fill_solid(leds, NUM_LEDS, CHSV(257, 255, i));
+                        delay(10);
+                        FastLED.show();
+                      }
+                    }
+                
+                
+                    // Fade the LED in and out
+                    // for (int i = 0; i < 256; i++) {
+                    //   CRGB col = CRGB(i, i, i);
+                    //   fill_solid(leds, NUM_LEDS, col);
+                
+                    // }
+                
+                
+                  } else {
+                    if ((millis() - lastSoundDetectTime) > soundAlarmTime && bAlarm) {
+                      Serial.println("quiet");
+                      bAlarm = false;
+                      //   // Fade the LED in and out
+                
+                      //   // leds[0] = CHSV(255, 0, 0);
+                      fill_solid(leds, NUM_LEDS, CHSV(170, 0, 0));
+                
+                      FastLED.show();
+                      delay(10);
+                    }
+                  }
+                </code></pre>
+    </section>
+
+    <script src="../../modules/p5/lib/p5.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
