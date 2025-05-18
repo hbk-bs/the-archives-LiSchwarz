@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Starter Project</title>
+    <style>
+    html,
+    body {
+        height: 100%;
+        max-width: 110ch;
+        min-width: 60ch;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-family: "Gill Sans", sans-serif;
+        font-weight: normal;
+        color: rgb(185, 12, 12);
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding-top: 50px; 
+    }
+
+    main {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    a {
+        color: rgb(185, 12, 12);
+        text-decoration: none; 
+    }
+
+    a:hover {
+        color: rgba(185, 12, 12, 0.533);
+    }
+
+    a.back-link {
+        position: absolute;
+        left: 10px;
+        top: 65px; 
+        font-size: 1.2rem;
+    }
+
+    a.title {
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 180%;
+            color: rgb(185, 12, 12);
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-link">«</a>
+    <a class="title">Symmetrie</a>
+    <main>
+        <div id="sketch"></div>
+        <a href="index.js">source code</a>
+    </main>
+    <script src="../../modules/p5/lib/p5.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

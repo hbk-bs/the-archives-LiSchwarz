@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Starter Project</title>
+    <style>
+    html,
+    body {
+        height: 100%;
+        max-width: 110ch;
+        min-width: 60ch;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-family: "Gill Sans", sans-serif;
+        font-weight: normal;
+        color: rgb(185, 12, 12);
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding-top: 40px; 
+        min-height: 100vh;
+    }
+
+    a {
+        color: rgb(185, 12, 12);
+        text-decoration: none; 
+    }
+
+    a:hover {
+        color: rgba(185, 12, 12, 0.533);
+    }
+
+    a.back-link {
+        position: absolute;
+        left: 10px;
+        top: 65px; 
+        font-size: 1.2rem;
+    }
+
+    a.title {
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 180%;
+            color: rgb(185, 12, 12);
+            font-weight: 700;
+        }
+
+    section {
+        max-width: 60%;
+        min-width: 60%;
+        margin-top: 40px; 
+        padding: 24px;
+        box-sizing: border-box;
+        text-align: left;
+
+        background-color: rgb(185, 12, 12); 
+        color: white; 
+        border-radius: 12px; 
+    }
+
+    section p {
+        margin-bottom: 10px;
+    }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">«</a>
+    <a class="title">Kontakt</a>
+
+    <section>
+        <p><strong>Dokumentation</strong></p>
+        <p>Grundlagen der digitalen Kommunikation 1</p>
+        <p>Visuelle Kommunikation WiSe 24/25</p>
+        <p>HBK Braunschweig</p> 
+        <p>Linda Schwarz</p>
+        <p>Matrikel-Nr.: 79135</p>
+    </section>
+
+    <script src="../../modules/p5/lib/p5.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+

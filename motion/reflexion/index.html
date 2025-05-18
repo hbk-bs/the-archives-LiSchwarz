@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Starter Project</title>
+    <style>
+        html, body {
+            height: 100%;
+            max-width: 110ch;
+            min-width: 60ch;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-family: "Gill Sans", sans-serif;
+            font-weight: normal;
+            color: rgb(185, 12, 12);
+            background-color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-top: 50px; 
+            min-height: 100vh;
+        }
+
+        a {
+            color: rgb(185, 12, 12);
+            text-decoration: none; 
+        }
+
+        a:hover {
+            color: rgba(185, 12, 12, 0.533);
+        }
+
+        a.back-link {
+            position: absolute;
+            left: 10px;
+            top: 65px; 
+            font-size: 1.2rem;
+        }
+
+        a.title {
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 180%;
+            color: rgb(185, 12, 12);
+            font-weight: 700;
+        }
+
+        section {
+            max-width: 70%;
+            min-width: 70%; 
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: left;
+            color: rgb(185, 12, 12); 
+        }
+
+        section p {
+            margin-bottom: 10px;
+        }
+
+        section p strong {
+            display: block;
+            margin-top: 40px;
+        }
+
+        .kasten-section {
+            background-color: rgb(185, 12, 12); 
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .kasten-section p strong {
+            margin-top: -20px; 
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-link">«</a>
+    <a class="title">Reflexion</a>
+
+    <section>
+        <p><strong>Bewegung</strong></p>
+        <p>
+Ähnlich wie beim Schwerpunkt Perspektive haben wir uns aus einer größeren Auswahl für fünf Begriffe entschieden. Besonders herausfordernd für mich waren die mathematischen Elemente der Programmcodes, da mir das logische Verständnis dafür fehlte. Daher war ich oft auf Hilfe und den Einsatz von KI angewiesen, um meine Ideen umzusetzen.  
+
+Inspiriert wurde ich für die Ergebnisse von Motion vor allem durch die Benutzeroberflächen digitaler Geräte, wie zum Beispiel das charakteristische Ladesymbol. Durch den Einsatz von JavaScript konnte ich gezielt Bewegungen steuern – beispielsweise, indem Objekte ein- und ausgeblendet oder entlang bestimmter Pfade bewegt wurden.  
+
+Die meisten meiner Ergebnisse wirkten jedoch zu abrupt und unnatürlich. Durch den Einsatz von "ease-in" und "ease-out" hätte ich dieses Problem verringern können, sodass die Bewegungen weicher und weniger linear erscheinen.  
+
+Insgesamt war es dennoch spannend, sich über statische Bilder hinauszuwagen und durch die Anwendung von JavaScript kleine Animationen zu erzeugen.  
+            
+        </p>
+    </section>
+
+    <script src="../../modules/p5/lib/p5.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
