@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js Starter Project</title>
+    <style>
+        html, body {
+            height: 100%;
+            max-width: 110ch;
+            min-width: 60ch;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-family: "Gill Sans", sans-serif;
+            font-weight: normal;
+            color: rgb(185, 12, 12);
+            background-color: white;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding-top: 50px; 
+            min-height: 100vh;
+        }
+
+        a {
+            color: rgb(185, 12, 12);
+            text-decoration: none; 
+        }
+
+        a:hover {
+            color: rgba(185, 12, 12, 0.533);
+        }
+
+        a.back-link {
+            position: absolute;
+            left: 10px;
+            top: 65px; 
+            font-size: 1.2rem;
+        }
+
+        a.title {
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 180%;
+            color: rgb(185, 12, 12);
+            font-weight: 700;
+        }
+
+        section {
+            max-width: 70%;
+            min-width: 70%; 
+            padding: 24px;
+            box-sizing: border-box;
+            text-align: left;
+            color: rgb(185, 12, 12); 
+        }
+
+        section p {
+            margin-bottom: 10px;
+        }
+
+        section p strong {
+            display: block;
+            margin-top: 40px;
+        }
+
+        .kasten-section {
+            background-color: rgb(185, 12, 12); 
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .kasten-section p strong {
+            margin-top: -20px; 
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../../index.html" class="back-link">«</a>
+    <a class="title">Reflexion</a>
+
+    <section>
+        <p><strong>Interaktion</strong></p>
+        <p>
+            Der Einstieg in das Thema Interaktion erfolgte über das Ausprobieren von „unnötigen“ Websites, mit denen die Nutzer*innen interagieren konnten. Das hat mir viel Freude bereitet, und es war erstaunlich, wie wenig Code zum Teil hinter aufwendig gestalteten Seiten steckt.
+
+            Als es darum ging, selbst eine solche Webseite zu gestalten, entwickelte sich die Idee, verschiedene Räume miteinander über Türen zu verbinden. Man sollte in einem Raum starten und den Ausgang finden – doch dieser wäre nie erreichbar, da hinter jeder Tür eine weitere wartet.
+            
+            Da ich mich nach wie vor mit dem Programmieren schwer tat, entschied ich mich dafür, die Räume in einem anderen Programm zu gestalten und als Fotos einzufügen. Leider habe ich inzwischen den Überblick über den Code verloren und dabei eine Änderung vorgenommen, die dazu führte, dass die Interaktion ab der zweiten Tür nicht mehr funktioniert.
+
+            Deshalb habe ich eine alternative Interaktion entwickelt, um mich noch einmal mit dem Thema auseinanderzusetzen. Die Idee ist ein Bild, das die Nutzer*innen herunterladen möchten – doch das ist nicht möglich. Stattdessen wechselt das Bild bei jedem Klick seine Position.
+            
+            Eine weitere Idee war eine unendlich abrollbare Toilettenpapierrolle oder ein Versteckspiel, bei dem die Nutzer*innen ein Objekt suchen müssen, das sich zwischen verschiedenen Verstecken hin und her bewegt. Das Besondere daran wäre, dass das Objekt niemals dort ist, wo man es vermutet – selbst wenn man gesehen hat, dass es sich dorthin bewegt hat.
+            
+            Besonders spannend wäre es, Interaktionen mit dem anschließenden Thema „Motion“ zu verbinden. Dadurch würde sich die Möglichkeit eröffnen, mit bewegten Objekten zu interagieren.
+        </p>
+    </section>
+
+    <script src="../../modules/p5/lib/p5.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

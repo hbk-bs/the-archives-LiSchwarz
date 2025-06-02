@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interaktive Bildbewegung</title>
+  <style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        cursor: pointer;
+        height: 200vh; 
+        height: 100%;
+        font-family: "Gill Sans", sans-serif;
+        font-weight: normal;
+        color: rgb(185, 12, 12);
+    }
+
+    a {
+        color: rgb(185, 12, 12);
+        text-decoration: none; 
+    }
+
+    a:hover {
+        color: rgba(185, 12, 12, 0.533);
+    }
+
+    a.back-link {
+        position: absolute;
+        left: 10px;
+        top: 65px; 
+        font-size: 1.2rem;
+    }
+
+    #image {
+      position: absolute;
+      width: 100px;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+    <a href="../../index.html" class="back-link">«</a>
+  <img id="image" src="https://via.placeholder.com/100" alt="load image">
+
+  <script>
+    const img = document.getElementById("image");
+
+    img.addEventListener("click", function () {
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      
+      const maxX = viewportWidth - img.width;
+      const maxY = viewportHeight - img.height;
+
+      const newX = Math.random() * maxX;
+      const newY = Math.random() * maxY;
+
+      img.style.left = newX + "px";
+      img.style.top = newY + "px";
+    });
+  </script>
+</body>
+
+</html>
+

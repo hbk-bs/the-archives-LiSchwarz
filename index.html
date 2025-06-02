@@ -1,18 +1,141 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>{the archive}</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .rot {
+        color: rgb(185, 12, 12);
+      }
+      .schwarz {
+        color: rgb(0, 0, 0);
+      }
 
-		<title>{the archive}</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<img
-			src="assets/images/ff6347-icon-512x512.webp"
-			alt="A square icon with rounded corners. Inside is a geometric design featuring a white square frame containing a black and gray diagonal split, with a smaller white square in the center where the diagonal lines meet."
-		/>
-		<script src="index.js"></script>
-	</body>
+      .header-links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px; 
+      }
+
+      .header-links a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+
+      .header-links a:hover {
+        color: rgb(185, 12, 12);
+      }
+
+      .perspektive-links,
+      .motion-links, .interaktion-links {
+        height: 0;
+        opacity: 0; 
+        overflow: hidden;
+        padding-left: 20px;
+        transition: height 0.5s ease, opacity 0.5s ease; 
+        margin-top: 0;
+      }
+
+      .perspektive-links.active,
+      .motion-links.active, .interaktion-links.active {
+        height: auto;
+        opacity: 1; 
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Dokumentation</h1>
+      <h4>Welches <span class="rot">Thema</span> interessiert dich?</h4>
+
+      <!-- Flexbox Container für h2, h5, h6 -->
+      <div class="header-links">
+        <a href="kontakt/index.html" class="h5-link">
+          <h5>Kontakt</h5>
+        </a>
+        <a href="reflektion/index.html" class="h6-link">
+          <h6>Reflexion</h6>
+        </a>
+      </div>
+    </header>
+
+    <main class="hintergrund">
+      <section class="Einleitung"></section>
+      <div class="image-container">
+        <p><span class="schwarz">Erfahre mehr über die Inhalte der digitalen Kommunikation.</span></p>
+
+        <h3><a href="algorithmus/foto.html">Algorithmus</a></h3>
+
+        <h3 class="perspektive-header">Perspektive</h3>
+        <ul class="perspektive-links">
+          <li><a href="perspektive/fluchtpunkt/index.html">Fluchtpunkt</a></li>
+          <li><a href="perspektive/symmetrie/index.html">Symmetrie</a></li>
+          <li><a href="perspektive/licht/index.html">Licht</a></li>
+          <li><a href="perspektive/vordergrund/index.html">Vordergrund</a></li>
+          <li><a href="perspektive/transparenz/index.html">Transparenz</a></li>
+          <li><a href="perspektive/transparenzneu/index.html">Transparenz neu</a></li>
+          <li><a href="perspektive/querschnitt/index.html">Querschnitt</a></li>
+          <li><a href="perspektive/reflektion/index.html">Spiegelung</a></li>
+          <li><a href="perspektive/rueckansicht/index.html">Rückansicht</a></li>
+          <a href="perspektive/reflexion/index.html">Reflexion</a>
+        </ul>
+
+        <h3 class="interaktion-header">Interaktion</h3>
+        <ul class="interaktion-links">
+          <li><a href="interaktion/tueren/index.html">Türen</a></li>
+          <li><a href="interaktion/fangen/index.html">load image</a></li>
+          <a href="interaktion/reflexion/index.html">Reflexion</a>
+        </ul>
+
+        <h3 class="motion-header">Bewegung</h3>
+        <ul class="motion-links">
+          <li><a href="motion/against-each-other/index.html">against each other</a></li>
+          <li><a href="motion/behind/index.html">behind</a></li>
+          <li><a href="motion/in-a-line/index.html">in a line</a></li>
+          <li><a href="motion/one-after-another/index.html">one after another</a></li>
+          <li><a href="motion/over/index.html">over</a></li>
+          <a href="motion/reflexion/index.html">Reflexion</a>
+        </ul>
+
+        <h3><a href="blinkenlichten/index.html">Blinkenlichten</a></h3>
+
+      </div>
+    </main>
+
+    <footer>
+      Linda Schwarz | Visuelle Kommunikation | HBK
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const perspektiveHeader = document.querySelector('.perspektive-header');
+        const perspektiveLinks = document.querySelector('.perspektive-links');
+        
+        const motionHeader = document.querySelector('.motion-header');
+        const motionLinks = document.querySelector('.motion-links');
+        
+        const interaktionHeader = document.querySelector('.interaktion-header');
+        const interaktionLinks = document.querySelector('.interaktion-links');
+
+        perspektiveHeader.addEventListener('click', function() {
+          perspektiveLinks.classList.toggle('active');
+        });
+
+        motionHeader.addEventListener('click', function() {
+          motionLinks.classList.toggle('active');
+        });
+
+        interaktionHeader.addEventListener('click', function() {
+          interaktionLinks.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
 </html>
+
+
